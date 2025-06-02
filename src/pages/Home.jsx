@@ -1,8 +1,11 @@
+import Header from "@/components/header";
 
 export default function Home(){
     return (
-        <>
-            <h1>Fatec Lanches</h1>
-        </>
+        <Header
+            title="Fatec Lanches"
+            subtitle="Evite filas na cantina. Compre online e retire com sua senha."
+        ></Header>
+        
     )
 }

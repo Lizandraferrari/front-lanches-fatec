@@ -1,22 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-code , a , p , h1 , h2 , h3 , h4 , h5 , h6 , b , i , input , select , body , button , li , u , caption{
+
+html , body{
+  font-family: "Roboto", sans-serif;
+  
+}
+code , a , p , h1 , h2 , h3 , h4 , h5 , h6 , b , i , input , select , button , u , caption , fieldset , legend{
   /*sobreescrita de fonte de forma a evitar bugs por falta de renderização da fonte em um ou mais pedaços do site*/
-  font-family: "Roboto";
+  font-family: inherit;
   color: #000;
+}
+
+* {
+  box-sizing: border-box;
 }
 body{
     margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
     background: #f0f0f0;
     font-weight: 300;
     display: flex;
     text-align: center;
 }
 nav{
-  background: #B20000;
-  color: #fff;
-  font-weight: 500;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
   height: 5em;
-  width: 100vw;
+  width: 100%;
+  background: #B20000;
+  font-weight: 500;
+  padding: 0em 1em ;
+}
+nav img{
+  width: 8em; 
+  max-width: 100%;
+  height: auto;
+}
+nav img:hover{
+  filter: invert(15%);
+}
+nav a , nav i{
+  display: flex;
+  align-items: end; /* a foto tem espaço em baixo, então se põe assim, ela centraliza, caso contrário fica com aspecto "torto" */
+  height: 100%;
+  color: #fff;
+  margin: 0em 0.5em;
+}
+nav ul a , nav ul i{
+  align-items: center; /*devido a dimensão da logo tem que acertar os itens manualmente*/
+}
+li a:hover ,
+li a:hover i {
+  color: #dadada;
+  cursor: pointer;
+}
+ul{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 2em;
 }
 button{
   background-color: #005C6D;
@@ -27,4 +70,59 @@ button{
 }
 h1{
   color: #005C6D;
+}
+li{
+  list-style: none;
+  color: #fff;
+}
+hr{
+  border: none;
+  height: 1px;
+  background: #666666;
+  margin: 0em 1em;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background: #dadada;
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.25);
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
+}
+
+.dropdown-menu li a {
+  display: flex;   
+  align-items: center;
+  color: #333333;  
+  padding: 1em 0.5em;
+  white-space: nowrap;
+  justify-content: space-around;
+}
+
+.dropdown-menu li i{
+  color: #333333;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; 
+}
+.dropdown-menu li a:hover i{
+    color: #000;
+}
+.dropdown-menu li a:hover {
+  background: #C2C2C2;
+  border-radius: 30px;
+  color: #000;
 }
