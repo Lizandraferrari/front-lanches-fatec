@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import Seletor from "../components/structure/Seletor";
+import Seletor from "@/components/Seletor";
 import QRCode from "react-qr-code";
 
 export default function Home(){
