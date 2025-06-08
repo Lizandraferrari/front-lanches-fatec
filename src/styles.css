@@ -154,7 +154,48 @@ select{
   flex-direction: row;
   align-items: center; 
   justify-content: center;
-  gap: 2em;
-  margin: 2em auto;
-  width: 60%;
+}
+.card-produto{
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  margin: 0.5em;
+  padding: 2em;
+}
+.card-produto:hover{
+    transform: scale(1.05);
+}
+.card-produto p{
+  text-decoration: underline;
+  font-size: large;
+  margin: 0.5em;
+}
+.card-produto h3{
+  font-size: x-large;
+  margin: 0.5em;
+
+}
+.controlador{
+  background-color: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  color: #333;
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  margin: 1em 0em;
+}
+
+button.controlador:hover{
+  background-color: #DADADA;
+}
+
+input.controlador {
+  border-style: none;
+  width: 2.5em;
+  background-color: #fff;
+}
+
+input[type="number"]::-webkit-inner-spin-button, /* pra tirar o + - do input type number*/
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
