@@ -18,7 +18,14 @@ export default function Home(){
                 <button type="submit">Buscar</button>
             </form>
 
-            <div className="flex-coluna" >
+            <div 
+                className="flex-coluna" 
+                style={{  
+                    gap: "2em",
+                    margin: "2em auto",
+                    width: "60%"
+                }}
+            >
                 <QRCode 
                     value="" 
                     aria-label="Código QR para download do aplicativo"
