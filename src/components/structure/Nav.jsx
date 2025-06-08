@@ -76,7 +76,7 @@ export default function Nav() {
             </a>
           </li>
           <li>
-            <a>
+            <a href="/bomboniere">
               <i className="bi bi-cake" aria-hidden="true"></i>
               Bomboniere
             </a>

@@ -160,6 +160,7 @@ select{
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
   margin: 0.5em;
   padding: 2em;
+
 }
 .card-produto:hover{
     transform: scale(1.05);
@@ -172,7 +173,11 @@ select{
 .card-produto h3{
   font-size: x-large;
   margin: 0.5em;
-
+}
+.card-produto img{
+  width: 230px;
+  height: 230px;
+  border-radius: 10px 10px 0px 0px;
 }
 .controlador{
   background-color: transparent;
