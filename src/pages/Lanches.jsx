@@ -1,8 +1,8 @@
 import Categoria from "@/components/Categoria";
-import risolesQueijoImg from "@/assets/risoles-queijo.png";
-import kibeFritoImg from "@/assets/kibe-frito.png";
-import coxinhaFritaImg from "@/assets/coxinha-frita.png";
-import bolovoFritoImg from "@/assets/bolovo-frito.png";
+import risolesQueijoImg from "@/assets/lanches/risoles-queijo.png";
+import kibeFritoImg from "@/assets/lanches/kibe-frito.png";
+import coxinhaFritaImg from "@/assets/lanches/coxinha-frita.png";
+import bolovoFritoImg from "@/assets/lanches/bolovo-frito.png";
 
 export default function Lanches(){
     const header = {
