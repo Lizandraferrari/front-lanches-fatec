@@ -46,6 +46,7 @@ nav a , nav i{
   height: 100%;
   color: #fff;
   margin: 0em 0.5em;
+  text-decoration: none;
 }
 nav ul a , nav ul i{
   align-items: center; /*devido a dimensão da logo tem que acertar os itens manualmente*/
@@ -198,4 +199,9 @@ input[type="number"]::-webkit-inner-spin-button, /* pra tirar o + - do input typ
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.conteiner-produtos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
