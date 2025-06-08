@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home"
-import Layout from "./components/structure/Layout";
+import Home from "@/pages/Home"
+import Layout from "@/components/structure/Layout";
+import Lanches from "@/pages/Lanches";
 
 export default function Routes (){
       const router = createBrowserRouter([
@@ -10,6 +11,10 @@ export default function Routes (){
                 {                
                     path:"/" ,
                     element: <Home />,
+                },
+                {
+                    path:"/lanches",
+                    element: <Lanches />,
                 },
             ],
          }

@@ -70,7 +70,7 @@ export default function Nav() {
           </li>
 
           <li>
-            <a>
+            <a href="/lanches">
               <i className="bi bi-fork-knife" aria-hidden="true"></i>
               Lanches
             </a>
