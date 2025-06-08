@@ -67,6 +67,11 @@ button{
   border-radius: 30px;
   border: none;
   padding: 0.5em 2em;
+  font-weight: 400;
+}
+button:hover{
+  background-color: #004854;
+  cursor: pointer;
 }
 h1{
   color: #005C6D;
@@ -81,6 +86,17 @@ hr{
   background: #666666;
   margin: 0em 1em;
 }
+a{
+  color: #0000EE;
+}
+select{
+  border-radius: 30px;
+  padding: 0.5em 1em;
+  width:20em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
 .dropdown{
   position: relative;
 }
@@ -125,4 +141,20 @@ hr{
   background: #C2C2C2;
   border-radius: 30px;
   color: #000;
+}
+.flex-linha{
+  display: flex;
+  flex-direction: column;  
+  align-items: center; 
+  justify-content: center;
+
+}
+.flex-coluna{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  gap: 2em;
+  margin: 2em auto;
+  width: 60%;
 }
