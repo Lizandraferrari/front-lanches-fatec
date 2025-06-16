@@ -1,14 +1,12 @@
-import { useState } from "react";
 
-export default function Quantidade() {
-  const [quantity, setQuantity] = useState(0);
+export default function Quantidade({quantity , setQuantity}) {
 
   return (
     <div className="flex-coluna">
       <label htmlFor="campo-quantidade">Quantidade: </label>
       <div >
         <button
-          onClick={() => setQuantity((q) => Math.max(q - 1, 0))}
+          onClick={() => setQuantity((num) => Math.max(num - 1, 0))}
           className="controlador"
           aria-label="Diminuir quantidade"
         >
@@ -20,11 +18,11 @@ export default function Quantidade() {
           max="99"
           step="1"
           value={quantity}
-          onChange={(e) => setQuantity(Number(e.target.value))}
+          onChange={(num) => setQuantity(Number(num.target.value))}
           className="controlador"
         />
         <button
-          onClick={() => setQuantity((q) => q + 1)}
+          onClick={() => setQuantity((num) => num + 1)}
           className="controlador"
           aria-label="Aumentar quantidade"
         >

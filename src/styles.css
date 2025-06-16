@@ -17,7 +17,7 @@ body{
     margin: 0;
     flex-direction: column;
     min-height: 100vh;
-    background: #f0f0f0;
+    background: var(--cinza-background);
     font-weight: 300;
     display: flex;
     text-align: center;
@@ -28,7 +28,7 @@ nav{
   align-items: center;
   height: 5em;
   width: 100%;
-  background: #B20000;
+  background: var(--vermelho-cps);
   font-weight: 500;
   padding: 0em 1em ;
 }
@@ -53,7 +53,7 @@ nav ul a , nav ul i{
 }
 li a:hover ,
 li a:hover i {
-  color: #dadada;
+  color: var(--cinza-hover);
   cursor: pointer;
 }
 ul{
@@ -63,7 +63,7 @@ ul{
   gap: 2em;
 }
 button{
-  background-color: #005C6D;
+  background-color: var(--azul-cps);
   color: #fff;
   border-radius: 30px;
   border: none;
@@ -71,11 +71,11 @@ button{
   font-weight: 400;
 }
 button:hover{
-  background-color: #004854;
+  background-color: var(--azul-cps-hover);
   cursor: pointer;
 }
 h1{
-  color: #005C6D;
+  color: var(--azul-cps);
 }
 li{
   list-style: none;
@@ -112,7 +112,7 @@ select{
   position: absolute;
   top: 100%; 
   left: 0;
-  background: #dadada;
+  background: var(--cinza-hover);
   box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.25);
   padding: 0;
   margin: 0;
@@ -155,6 +155,7 @@ select{
   flex-direction: row;
   align-items: center; 
   justify-content: center;
+  flex-wrap: wrap;
 }
 .card-produto{
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
@@ -191,7 +192,7 @@ select{
 }
 
 button.controlador:hover{
-  background-color: #DADADA;
+  background-color: var(--cinza-hover);
 }
 
 input.controlador {
@@ -209,4 +210,95 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.068);
+  z-index: 998;
+}
+
+.carrinho {
+  position: fixed;
+  top: 0;
+  transition: right 0.3s ease-in-out;
+  right: -100%; 
+  background: var(--cinza-background);
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.25);
+  padding: 2em 0.5em;
+  width: 400px;
+  height: 100%;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carrinho.open {
+  right: 0;
+
+}
+.botao-vermelho{
+  background-color: var(--vermelho-cps);
+}
+.botao-vermelho:hover{
+  background-color: var(--vermelho-cps-hover);
+}
+.card-carrinho{
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.card-carrinho label{
+  font-weight: 300;
+  font-size: small;
+}
+.card-carrinho img{
+  border-radius: 10px;
+}
+.card-carrinho img:hover{
+  filter: none;
+}
+.botao-fechar {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  align-items: start;
+  display: flex;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+.botao-fechar:hover{
+  transform: scale(1.06);
+  background: transparent;
+  color: #000;
+}
+
+.azul{
+  color: var(--azul-cps)
+}
+.vermelho{
+  color: var(--vermelho-cps);
+}
+:root{
+  --vermelho-cps: #B20000;
+  --vermelho-cps-hover: #7E0000;
+  --cinza-background: #f0f0f0;
+  --cinza-hover: #dadada;
+  --azul-cps: #005C6D;
+  --azul-cps-hover: #004854;
 }
