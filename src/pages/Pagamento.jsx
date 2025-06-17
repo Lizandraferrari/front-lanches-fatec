@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"; 
 import Header from "@/components/header";
 import CardCarrinho from "@/components/cardCarrinho"; 
+import FormaPagamento from "@/components/formaPagamento";
 
 export default function Pagamento() {
   let total = 0
@@ -31,10 +32,10 @@ export default function Pagamento() {
       <Header title={header.title} subtitle={header.subtitle} />
 
       {carrinho.length > 0 ? (
-        <div className="flex-coluna">
+        <div className="flex-coluna-start">
           <section style={{ width: '70%' }}>
             <h3 style={{fontWeight:'400'}}>Detalhes do Pedido:</h3>
-            <div className="conteiner-produtos scroll" style={{ maxHeight: '50vh' }}>
+            <div className="conteiner-produtos scroll" style={{ maxHeight: '45vh' }}>
               {carrinho.map((item, i) => (
                 total += (item.price * item.quantity),
                 <CardCarrinho
@@ -51,7 +52,10 @@ export default function Pagamento() {
           </section>
 
           <section style={{ width: '30%' }}>
-            {/* seção de pagamento */}
+            <FormaPagamento
+            
+            >
+            </FormaPagamento>
           </section>
         </div>
       ) : (
