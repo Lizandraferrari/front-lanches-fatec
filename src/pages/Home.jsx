@@ -13,13 +13,14 @@ export default function Home(){
             <form style={{marginTop:"3em"}}>
                 <Seletor
                     label={"Para continuar selecione sua unidade:"}
+                    default={"Sua Fatec"}
                     options={options}
                 ></Seletor>
                 <button type="submit">Buscar</button>
             </form>
 
             <div 
-                className="flex-coluna" 
+                className="flex-coluna-center" 
                 style={{  
                     gap: "2em",
                     margin: "2em auto",

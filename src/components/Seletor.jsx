@@ -3,17 +3,18 @@ export default function Seletor(data) {
 
   return (
     <div className="flex-linha">
-        <label htmlFor="opcoes-selecao">{data.label}</label>
-        <select id="opcoes-selecao"  >
-            <option value="" disabled selected>
-              Sua Fatec
-              </option>
-            {options.map((item, i) => (
-                <option key={i} value={item}>
-                  {item}
+        <label htmlFor="opcoes-selecao">{data.label}
+          <select id="opcoes-selecao" onChange={data.onChange}>
+              <option value="" disabled selected>
+                {data.default}
                 </option>
-            ))}
-        </select>
+              {options.map((item, i) => (
+                  <option key={i} value={item}>
+                    {item}
+                  </option>
+              ))}
+          </select>
+        </label>
     </div>
 
   )

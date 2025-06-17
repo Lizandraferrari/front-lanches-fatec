@@ -2,7 +2,7 @@
 export default function Quantidade({quantity , setQuantity}) {
 
   return (
-    <div className="flex-coluna">
+    <div className="flex-coluna-center">
       <label htmlFor="campo-quantidade">Quantidade: </label>
       <div >
         <button
