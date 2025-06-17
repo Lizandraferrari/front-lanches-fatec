@@ -3,6 +3,7 @@ import { useState } from "react";
 import ItemNav from "./itensNav/itemNav";
 import Carrinho from "./itensNav/Carrinho";
 import DropdownAcessibilidade from "./itensNav/dropdownAcessibilidade";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -28,9 +29,9 @@ export default function Nav() {
   return (
     <>
       <nav>
-        <a href="/" aria-label="Ir para a página inicial">
+        <Link to="/" aria-label="Ir para a página inicial">
           <img src={logo} alt="Logo Fatec" />
-        </a>
+        </Link>
         <ul>
           <DropdownAcessibilidade />
           {itensNav.map((item, i) => (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CardCarrinho from "../../cardCarrinho";
+import { Link } from "react-router-dom";
 
 export default function Carrinho({ open, onClose }) {
   const [carrinho, setCarrinho] = useState([]);
@@ -36,7 +37,7 @@ export default function Carrinho({ open, onClose }) {
             <h2 className="azul">Itens no carrinho:</h2>
             {carrinho.length > 0 ? (
               <>
-                <div>
+                <div className="scroll">
                   {carrinho.map((item, i) => {
                     total += item.price * item.quantity;
                     return (
@@ -52,7 +53,9 @@ export default function Carrinho({ open, onClose }) {
                   })}
                 </div>
                 <h3>Total: R$ {total.toFixed(2).replace('.', ',')}</h3>
-                <button className="botao-vermelho">Finalizar</button>
+                <Link to="/pagamento" style={{height:'0px'}}>
+                  <button className="botao-vermelho" >Finalizar</button>
+                </Link>
               </>
             ) : (
               <>
