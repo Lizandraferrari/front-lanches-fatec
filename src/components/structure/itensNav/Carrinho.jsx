@@ -52,7 +52,7 @@ export default function Carrinho({ open, onClose }) {
                     )
                   })}
                 </div>
-                <h3>Total: R$ {total.toFixed(2).replace('.', ',')}</h3>
+                <h3 style={{margin:'1.5em'}}>Total: R$ {total.toFixed(2).replace('.', ',')}</h3>
                 <Link to="/pagamento" style={{height:'0px'}}>
                   <button className="botao-vermelho" >Finalizar</button>
                 </Link>
