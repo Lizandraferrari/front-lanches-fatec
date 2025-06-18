@@ -90,6 +90,16 @@ hr{
 a{
   color: #0000EE;
 }
+button i{
+  cursor: pointer;
+  padding: 0.5em;
+  gap: 5px;
+  font-weight: 500;
+}
+button i:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
 select , input{
   border-radius: 30px;
   padding: 0.5em 1em;
@@ -132,7 +142,7 @@ form label , label > select{
   box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.25);
   padding: 0;
   margin: 0;
-  border-radius: 30px;
+  border-radius: 10px;
   z-index: 1001;
 }
 
@@ -159,6 +169,14 @@ form label , label > select{
   background: #C2C2C2;
   border-radius: 30px;
   color: #000;
+}
+.preto-branco {
+  filter: grayscale(100%) !important;
+}
+
+.alto-contraste {
+  background-color: #000 !important;
+  color: #FFD700 !important;
 }
 .flex-linha{
   display: flex;
